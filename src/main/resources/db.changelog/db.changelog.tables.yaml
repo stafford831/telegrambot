@@ -1,0 +1,120 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1
+      author:
+      changes:
+        - createTable:
+            tableName: questions
+            columns:
+              - column:
+                  name: text
+                  type: varchar(2000)
+                  constraints:
+                    unique: false
+                    nullable: false
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+        - createTable:
+            tableName: options
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: text
+                  type: varchar(2000)
+                  constraints:
+                    nullable: false
+                    unique: false
+              - column:
+                  name: question_id
+                  type: bigint
+                  constraints:
+                    nullable: false
+                    foreignKeyName: question_options_foreign_question_id_key
+                    references: questions(id)
+              - column:
+                  name: correct
+                  type: boolean
+                  constraints:
+                    nullable: false
+        - createTable:
+            tableName: users
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: telegram_id
+                  type: bigint
+                  constraints:
+                    nullable: false
+                    unique: true
+        - createTable:
+            tableName: devices
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: device_serial
+                  type: varchar(256)
+                  constraints:
+                    nullable: true
+                    unique: true
+              - column:
+                  name: expiration_date
+                  type: timestamp
+                  constraints:
+                    nullable: false
+              - column:
+                  name: user_id
+                  type: bigint
+                  constraints:
+                    nullable: false
+                    foreignKeyName: user_devices_foreign_user_id_key
+                    references: users(id)
+        - createTable:
+            tableName: test_results
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: passed
+                  type: boolean
+                  constraints:
+                    nullable: true
+              - column:
+                  name: completed_on
+                  type: timestamp
+                  constraints:
+                    nullable: false
+              - column:
+                  name: user_id
+                  type: bigint
+                  constraints:
+                    nullable: false
+                    foreignKeyName: user_test_results_foreign_user_id_key
+                    references: users(id)
