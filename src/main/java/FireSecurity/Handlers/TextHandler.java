@@ -4,10 +4,6 @@ import FireSecurity.Service.QuestionService;
 import FireSecurity.Service.TestingContextService;
 import FireSecurity.Service.UserService;
 
-/**
- * предок для всех handlerov, которые обрабатывают текстовые сообщения от пользователя
- */
-
 public abstract class TextHandler extends BaseHandler{
 
     public TextHandler(QuestionService questionService, UserService userService, TestingContextService testingContextService) {
