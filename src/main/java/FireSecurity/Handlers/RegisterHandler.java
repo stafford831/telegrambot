@@ -12,9 +12,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Component("/register")
-/**
- * регистрация нового пользователя
- */
 public class RegisterHandler extends TextHandler{
 
 
