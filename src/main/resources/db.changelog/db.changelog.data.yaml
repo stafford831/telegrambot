@@ -1,7 +1,7 @@
 databaseChangeLog:
   - changeSet:
       id: 2
-      author:
+      author: blinov
       changes:
         - loadData:
             encoding: UTF-8
