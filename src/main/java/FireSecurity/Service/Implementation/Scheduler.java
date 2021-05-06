@@ -19,14 +19,6 @@ import java.util.Optional;
 
 @Component
 @PropertySource("classpath:scheduler.properties")
-/**
- * класс для периодически запускаемых задач
- * Загуглить про cron, запуск приложения через 10 секунд
- * класс запуска периодических задач
- * testResultExpiredNotificationTask проверяет истек ли результат теста
- * deviceExpiredNotificationTask проверяет срок действия УС
- *
- */
 
 public class Scheduler {
 
