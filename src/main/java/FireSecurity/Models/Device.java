@@ -11,9 +11,6 @@ import java.util.Objects;
 @Setter
 @Entity
 @Table(name = "devices")
-/**
- * модель УС
- */
 public class Device {
 
     @Id
