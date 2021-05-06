@@ -13,9 +13,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Component("/test")
-/**
- * класс, который обрабатывает команду начала тестирования
- */
 public class TestHandler extends TextHandler{
     public TestHandler(QuestionService questionService, UserService userService, TestingContextService testingContextService) {
         super(questionService, userService, testingContextService);
