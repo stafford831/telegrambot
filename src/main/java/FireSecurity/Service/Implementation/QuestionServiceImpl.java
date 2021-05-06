@@ -10,9 +10,6 @@ import java.util.List;
 
 @Service
 @RequiredArgsConstructor
-/**
- * реализация интерфейса QuestionService
- */
 public class QuestionServiceImpl implements QuestionService {
 
     private final QuestionDao questionDao;
