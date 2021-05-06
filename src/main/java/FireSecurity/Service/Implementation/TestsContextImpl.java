@@ -12,10 +12,6 @@ import java.util.Map;
 @Component
 @Getter
 @RequiredArgsConstructor
-/**
- * класс для работы с текущим контекстом тестирования для конкретного пользователя, определяемого по телеграмм id
- */
-
 public class TestsContextImpl implements TestingContextService {
 
     private final Map<Long, List<Question>> context;
