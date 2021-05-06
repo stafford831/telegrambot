@@ -18,9 +18,7 @@ import java.util.List;
 
 @Getter
 @RequiredArgsConstructor
-/**
- * общий предок для handlerов, через который инжектятся все сервисы
- */
+
 public abstract class BaseHandler implements UpdateHandler{
 
     protected final QuestionService questionService;
