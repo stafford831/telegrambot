@@ -34,12 +34,6 @@ public abstract class BaseHandler implements UpdateHandler{
 
     public abstract HandlerType getType();
 
-    /**
-     * Метод создания сообщения из вопроса
-     * @param update апдейт от пользователя
-     * @param question вопрос
-     * @return Сообщение для пользователя
-     */
     protected SendMessage createQuestionMessage(Update update, Question question) {
         SendMessage sendMessage = new SendMessage();
 
@@ -75,12 +69,6 @@ public abstract class BaseHandler implements UpdateHandler{
         return sendMessage;
     }
 
-    /**
-     * выдача текста пользователя
-     * @param update апдейт от пользователя
-     * @param text текст, который выдается пользователю
-     * @return сообщение пользователю
-     */
     protected SendMessage createSendMessage(Update update, String text) {
         SendMessage sendMessage = new SendMessage();
         String chatId = String.valueOf(update.hasMessage()
