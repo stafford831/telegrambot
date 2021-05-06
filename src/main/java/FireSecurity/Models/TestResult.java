@@ -11,9 +11,6 @@ import java.util.Objects;
 @Setter
 @Entity
 @Table(name = "test_results")
-/**
- * запись результата
- */
 public class TestResult {
 
     @Id
