@@ -15,9 +15,6 @@ import java.util.Optional;
 @Setter
 @Entity
 @Table(name = "questions")
-/**
- * вопрос
- */
 public class Question {
 
     @Id
