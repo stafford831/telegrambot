@@ -11,9 +11,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Component("/delete")
-/**
- * удаление пользователя
- */
 public class DeleteHandler extends TextHandler {
 
     public DeleteHandler(QuestionService questionService, UserService userService, TestingContextService testingContextService) {
