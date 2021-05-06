@@ -4,9 +4,6 @@ import FireSecurity.Models.User;
 
 import java.util.List;
 
-/**
- * сервис для работы с пользователем
- */
 public interface UserService {
 
     User findByTelegramId(Long tId);
