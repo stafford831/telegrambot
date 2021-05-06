@@ -20,9 +20,6 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @Component("test_answer")
-/**
- * класс анализирует ответы пользователя от нажатия кнопок при тестировании
- */
 public class TestAnswerHandler extends CallbackHandler {
     public TestAnswerHandler(QuestionService questionService, UserService userService, TestingContextService testingContextService) {
         super(questionService, userService, testingContextService);
