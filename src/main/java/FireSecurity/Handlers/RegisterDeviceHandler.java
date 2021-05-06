@@ -16,9 +16,6 @@ import java.util.Date;
 import java.util.List;
 
 @Component("/regdevice")
-/**
- * регистрация УС
- */
 public class RegisterDeviceHandler extends TextHandler{
 
     private static final String EXPECTED_DATE_FORMAT = "dd.MM.yyyy";
