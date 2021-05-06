@@ -18,13 +18,13 @@ import java.util.Optional;
 public class Question {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY) // погуглить про GenerationType.IDENTITY
+    @GeneratedValue(strategy = GenerationType.IDENTITY) 
     private Long id;
 
     @Column(name="text")
     private String text;
 
-    @OneToMany(mappedBy = "question", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER) //погуглить про FetchType.EAGER
+    @OneToMany(mappedBy = "question", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.EAGER) 
     @Fetch(value = FetchMode.SUBSELECT)
     private List<Option> options = new ArrayList<>();
 
