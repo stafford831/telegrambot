@@ -14,9 +14,6 @@ import java.util.Objects;
 @Setter
 @Entity
 @Table(name = "users")
-/**
- * модель пользователя
- */
 public class User {
 
     @Id
