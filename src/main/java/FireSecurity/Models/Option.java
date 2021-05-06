@@ -10,9 +10,6 @@ import java.util.Objects;
 @Setter
 @Entity
 @Table(name = "options")
-/**
- * вариант ответов
- */
 public class Option {
 
     @Id
